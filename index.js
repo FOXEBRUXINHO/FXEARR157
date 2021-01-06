@@ -617,8 +617,8 @@ async function starts() {
 						samih.splice(from, 1)
 						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
 						reply('Desativando o modo simi com sucesso neste grupo✔️')
-					} else {
-						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan)
+                                                } else {
+						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
 					}
 					break
 				case 'welcome':
@@ -634,7 +634,7 @@ async function starts() {
 						welkom.splice(from, 1)
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
 						reply('Desativando com sucesso o recurso de boas-vindas neste grupo ✔️')
-					} else {
+						} else {
 						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
 					}
                                       break
