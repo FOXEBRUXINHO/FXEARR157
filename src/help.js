@@ -1,106 +1,83 @@
-> * Comandos de adesivos * <
- comando: * .sticker * ou * .stiker *
- desc: converter imagem / gif / vídeo em adesivo
- uso: responder imagem / gif / vídeo ou enviar imagem / gif / vídeo com legenda
+const help = (prefix) => {
+	return `> *Sticker Commands* <
+command : *${prefix}sticker* or *${prefix}stiker*
+desc : convert image/gif/video to sticker
+usage : reply image/gif/video, or send image/gif/video with caption\n
+command : *${prefix}sticker nobg* or *${prefix}stiker nobg*
+desc : convert image to sticker while removing the background
+usage : reply image, or send image with caption\n
+command : *${prefix}toimg*
+desc : convert sticker to image
+usage : reply sticker\n
+command : *${prefix}tsticker* or *${prefix}tstiker*
+desc : convert text to sticker
+usage : *${prefix}tsticker text in here*\n
+> *Meme Commands* <
+command : *${prefix}meme*
+desc : random meme images [english]
+usage : just send the command\n
+command : *${prefix}memeindo*
+desc : random meme images [indo]
+usage : just send the command\n
+> *Others Commands* <
+command : *${prefix}gtts*
+desc : convert text to speech/audio
+usage : *${prefix}gtts [cc] [text]*\nexample : *${prefix}gtts ja On2-chan*\n
+command : *${prefix}loli*
+desc : random loli images
+usage : just send the command\n
+command : *${prefix}nsfwloli*
+desc : random nsfw loli images
+usage : just send the command\n
+command : *${prefix}url2img*
+desc : take web screenshots
+usage : *${prefix}url2img [tipe] [url]*\n
+command : *${prefix}simi*
+desc : your message will be replied to by simi
+usage : *${prefix}simi yourmessage*\n
+command : *${prefix}ocr*
+desc : take the text in the picture
+usage : reply image, or send image with caption\n
+command : *${prefix}wait*
+desc : search anime with image [ What Anime Is This/That ]
+usage : reply image, or send image with caption\n
+command : *${prefix}setprefix*
+desc : replace prefix
+usage : *${prefix}setprefix [text|optional]*\nexample : *${prefix}setprefix ?*
+note : This command can only be used by the bot owner\n
+> *Group Comands* <
+command : *${prefix}add*
+desc : add member into group
+usage : *${prefix}add 62813xxxxx*\n
+note : can only be used when the bot becomes admin, and the one who sends the command is admin!\n
+command : *${prefix}kick*
+desc : kick members from group
+usage : *${prefix}kick @tagmember*\n
+note : can only be used when the bot becomes admin, and the one who sends the command is admin!\n
+command : *${prefix}promote*
+desc : make the group member as group admin
+usage : *${prefix}promote @tagmember*\n
+note : can only be used when the bot becomes admin, and the one who sends the command is admin!\n
+command : *${prefix}demote*
+desc : make the group admin as group member
+usage : *${prefix}demote @tagmember*\n
+note : can only be used when the bot becomes admin, and the one who sends the command is admin!\n
+command : *${prefix}linkgroup*
+desc : take the group link
+usage : just send the command
+note : can only be used when the bot becomes admin, and the one who sends the command is admin!\n
+command : *${prefix}leave*
+desc : Make bot leave the group
+usage : just send the command
+note : Can only be used by Group admins and Bot owner\n
+command : *${prefix}tagall*
+desc : tags all group members including admins too
+usage : just send the command
+note : This command can be used if you are a group admin\n
+command : *${prefix}simih*
+desc : activate simi mode in the group
+usage : *${prefix}simih 1* to activate simi mode and *${prefix}simih 0* to deactivate simi mode
+note : This command can be used if you are a group admin\n`
+}
 
- comando: * .sticker nobg * ou * .stiker nobg *
- desc: converte imagem em adesivo enquanto remove o fundo
- uso: responder imagem ou enviar imagem com legenda
-
- comando: * .toimg *
- desc: converter adesivo em imagem
- uso: adesivo de resposta
-
- comando: * .tsticker * ou * .tstiker *
- desc: converter texto em adesivo
- uso: * .tsticker texto aqui *
-
- > * Comandos Meme * <
- comando: * .meme *
- desc: imagens aleatórias de meme [inglês]
- uso: basta enviar o comando
-
- comando: * .memeindo *
- desc: imagens meme aleatórias [indo]
- uso: basta enviar o comando
-
- > * Outros comandos * <
- comando: * .gtts *
- desc: converter texto em fala / áudio
- uso: * .gtts [cc] [texto] *
- exemplo: * .gtts ja On2-chan *
-
- comando: * .loli *
- desc: imagens aleatórias de loli
- uso: basta enviar o comando
-
- comando: * .nsfwloli *
- desc: imagens aleatórias de nsfw loli
- uso: basta enviar o comando
-
- comando: * .url2img *
- desc: faz capturas de tela da web
- uso: * .url2img [tipe] [url] *
-
- comando: * .simi *
- desc: sua mensagem será respondida por simi
- uso: * .simi sua mensagem *
-
- comando: * .ocr *
- desc: tira o texto da imagem
- uso: responder imagem ou enviar imagem com legenda
-
- comando: * .wait *
- desc: pesquisar anime com imagem [What Anime Is This / That]
- uso: responder imagem ou enviar imagem com legenda
-
- comando: * .setprefix *
- desc: substituir prefixo
- uso: * .setprefix [texto | opcional] *
- exemplo: * .setprefix? *
- nota: este comando só pode ser usado pelo proprietário do bot
-
- > * Comandos do Grupo * <
- comando: * .add *
- desc: adicionar membro ao grupo
- uso: * .add 62813xxxxx *
-
- nota: só pode ser usado quando o bot se torna admin, e quem envia o comando é admin!
-
- comando: * .kick *
- desc: expulsar membros do grupo
- uso: * .kick @ tagmember *
-
- nota: só pode ser usado quando o bot se torna admin, e quem envia o comando é admin!
-
- comando: * .promote *
- desc: tornar o membro do grupo como administrador do grupo
- uso: * .promote @ tagmember *
-
- nota: só pode ser usado quando o bot se torna admin, e quem envia o comando é admin!
-
- comando: * .demote *
- desc: tornar o administrador do grupo como membro do grupo
- uso: * .demote @ tagmember *
-
- nota: só pode ser usado quando o bot se torna admin, e quem envia o comando é admin!
-
- comando: * .linkgroup *
- desc: pegue o link do grupo
- uso: basta enviar o comando
- nota: só pode ser usado quando o bot se torna admin, e quem envia o comando é admin!
-
- comando: * .leave *
- desc: Faça o bot sair do grupo
- uso: basta enviar o comando
- nota: só pode ser usado por administradores de grupo e proprietário de bot
-
- comando: * .tagall *
- desc: marca todos os membros do grupo, incluindo administradores também
- uso: basta enviar o comando
- nota: este comando pode ser usado se você for um administrador de grupo
-
- comando: * .simih *
- desc: ativa o modo simi no grupo
- uso: * .simih 1 * para ativar o modo simi e * .simih 0 * para desativar o modo simi
- nota: este comando pode ser usado se você for um administrador de grupo
+exports.help = help
