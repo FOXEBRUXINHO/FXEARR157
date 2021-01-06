@@ -1,5 +1,5 @@
 {
-  "name": "FOX E BRUXINHO",
+  "name": "termux-wabot",
   "version": "0.0.2",
   "description": "No comment",
   "main": "index.js",
@@ -17,7 +17,7 @@
     "whatsapp",
     "bot"
   ],
-  "author": "FOX E BRUXINHO",
+  "author": "MhankBarBar",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
